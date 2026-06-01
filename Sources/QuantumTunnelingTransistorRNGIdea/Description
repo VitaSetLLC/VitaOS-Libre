@@ -1,0 +1,16 @@
+According to Albert Einstein, causality, meaning cause and effect,
+cannot travel faster than the speed of light. This means that
+information cannot travel faster than the speed of light. If a
+transistor were to be constructed, say, 256 of them in my FPGA chip,
+spread out in a 16 by 16 grid, and that transistor, with its output
+ANDed with a clock wire, is the output of a quantum tunneling
+transistor RNG. How it would work, is that the transistor gate is small
+enough to tempt the electrons into flowing across every clock cycle
+exactly 50% of the time. Because this is a form of quantum
+teleportation of a electron, no information is being transferred, and
+therefore, it is a 100% random bit generator.
+
+The Quantum Tunneling Transistor RNG Idea Subproject is dedicated to
+the Public Domain, however, once I add some code, that code will be
+licensed under The VitaSet License, but the idea will remain dedicated
+to the Public Domain.

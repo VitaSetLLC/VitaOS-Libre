@@ -1,0 +1,15 @@
+I solved the halting problem, it doesn't exist. Just check every n + 1
+clock cycles whether the previous savestate (a term from speedrunning)
+matches the current savestate exactly, byte for byte. You can discard
+the previous previous savestate.
+
+n can be a arbitrary precision integer. You add 1 to n every time you
+check. Also, my algorithm detects all infinite loops, but some infinite
+loops may be whitelisted like the OS kernel.
+
+Now where's my million dollars for proving P=NP...
+
+The Halting Problem Solution Idea Subproject is dedicated to the Public
+Domain, however, once I add some code, that code will be licensed under
+The VitaSet License, but the idea will remain dedicated to the Public
+Domain.

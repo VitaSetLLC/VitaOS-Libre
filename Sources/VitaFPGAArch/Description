@@ -1,0 +1,28 @@
+The Vita FPGA Architecture Subproject is licensed under The VitaSet
+License.
+
+The Vita FPGA Architecture Verilog files VitaFPGAArchLogicBlock.v and
+VitaFPGAArchMemoryBlock.v are bugfree.
+
+Using two input, one output nand or two input, one output nor gates,
+one can express any possible truth table.
+
+The VitaFPGAArchMemoryBlock.v file implements a D-Flip Flop with two
+configurable inputs and two configurable outputs that output the same
+value in two directions.
+
+The VitaFPGAArchLogicBlock.v file implements a LUT2 with two
+configurable inputs and two outputs outputting one bit in two
+directions.
+
+A LUT2 can be programmed to ignore one or both inputs.
+
+Thus, any possible truth table can be expressed with enough Vita FPGA
+Architecture Logic Blocks. Thus, any integrated circuit can be
+possible, given enough Vita FPGA Architecture Logic Blocks are used.
+
+You are welcome to check out how it works, as explained by the
+Documentation file and the source code files.
+
+The Vita FPGA Architecture Synthesizer Subproject is under development,
+and is licensed under The VitaSet License.

@@ -1,0 +1,25 @@
+The Vita FPGA Architecture Synthesizer Subproject is a program designed
+to synthesize the source code written in the Verilog-2005 programming
+language into a bitstream that the Vita FPGA Architecture can run.
+
+The Vita FPGA Architecture Synthesizer Subproject is under development,
+and is licensed under The VitaSet License.
+
+The bitstreams produced can be run on computer chips that have the
+Vita FPGA Architecture in them, or by using the Vita FPGA Architecture
+Emulator Subproject with enough memory and patience. However, you can
+still quit the Vita FPGA Architecture Emulator Subproject program at
+any time with Ctrl + C, but all of your progress may be lost. You can
+also quit the Vita FPGA Architecture Synthesizer Subproject program at
+any time with Ctrl + C, but all of your progress may be lost.
+
+Future backends to the Vita FPGA Architecture Emulator can reduce the
+amount of patience required with their increased performance.
+
+The Vita FPGA Architecture Emulator Subproject currently supports using
+a single x86_64 CPU core as its backend. However, if you would like to
+contribute new backends, then you are welcome to do so, so long as you
+agree that your contributions to the Vita FPGA Architecture Emulator
+Subproject will be licensed under The VitaSet license.
+
+A backend that would be welcome to see, would be a GPGPU backend.
