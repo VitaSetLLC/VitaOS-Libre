@@ -1,0 +1,71 @@
+The VitaKernel Subproject is licensed under The VitaSet License.
+
+Trusted Computing Base: The VitaKernel, which is composed of these
+Subsystems: VitaClip, VitaUI, VitaEdit, VitaFiles, VitaCrypt,
+VitaCompress, VitaMount, VitaCompiler, VitaVM. 9 Subsystems, all in
+Ring 0. All in one PE32+ file, signed for UEFI Secure Boot. The
+VitaKernel is designed for the x86_64 Multicore Architecture. A future
+port to another architecture would be when I can get my VitaFPGA
+computer chips made, then I can make my VitaComputer.
+
+To run an arbitrary program, compile and link the VitaKernel source
+code and the program source code together using the VitaEdit program,
+accessible from the VitaUI. This creates a VitaVM Image.
+
+Then, sign the VitaVM Image with a VitaKernel Asymmetric Signing Key
+using the VitaFiles program, accessible from the VitaUI.
+
+Then, run it in a VitaVM with access to one or more directories in one
+or more filesystems, using the VitaVM program, accessible from the
+VitaUI.
+
+To edit the Trusted Computing Base Source Code or arbitrary source
+code, use the VitaEdit program, accessible from the VitaUI and press
+the Save button from time to time.
+
+To recompile the Trusted Computing Base Source Code or arbitrary source
+code, with or without changes, use the VitaEdit program, accessible
+from the VitaUI and press the VitaCompiler button.
+
+To sign, verify, encrypt or decrypt files, directories and binaries
+with a selected asymmetric key, use the VitaFiles program, accessible
+from the VitaUI and press the VitaCrypt button. From there, follow the
+pop-up instructions for signing, verifying, encrypting and decrypting
+files, directories and binaries. You can import asymmetric keys and you
+can create your own asymmetric keys.
+
+To copy, delete, move, compress, decompress files, directories and
+binaries and mount and unmount drives, use the VitaFiles program,
+accessible from the VitaUI. Remember to make backups from time to time.
+
+To interact with the VitaClip program, press Ctrl + C on selected text
+to copy it into the clipboard, press Ctrl + V to paste from the
+clipboard, answer “Yes” or “No” with the mouse or keyboard to let a
+VitaVM read the clipboard, or press on the VitaClip program, accessible
+from the VitaUI.
+
+The VitaUI has a button that shows the choices of shutdown, reboot,
+sleep and hibernate.
+
+The VitaClip, VitaUI, VitaEdit, VitaFiles, VitaCrypt, VitaCompress,
+VitaMount, VitaCompiler and VitaVM Subsystems run only on the Intel
+Integrated Graphics. All of the Subsystems are multicore, but a VitaVM
+can run with fewer cores. A VitaVM uses all cores by default.
+
+The VitaVM shares PCIe PassThrough with the other Subsystems for the
+Intel Integrated Graphics and the Laptop Ethernet Port.
+
+The VitaOS-Libre Operating System will be optimized for my 2021 HP Omen
+16.1” Gaming Laptop in Ceramic White with a 1440p display at 165 Hertz.
+The VitaOS-Libre Operating System will not include the proprietary WiFi
+Card Firmware, nor will it include the proprietary Nvidia Firmware.
+I’ll only upgrade if I can get my own VitaFPGA computer chips made,
+then I can make my VitaComputer.
+
+A VitaVM Image can be an entire Operating System, not just a computer
+program. While the VitaOS-Libre Operating System will not include the
+proprietary WiFi Card Firmware, nor will it include the proprietary
+Nvidia Firmware, a VitaVM can expose two PCIe Passthroughs so that you
+can run a VitaVM Image that can access and use the Laptop Nvidia 3070
+GPU and the Laptop WiFi Card in the 2021 HP Omen 16.1” Gaming Laptop in
+Ceramic White with a 1440p display at 165 Hertz.

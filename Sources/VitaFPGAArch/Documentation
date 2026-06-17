@@ -1,0 +1,167 @@
+The Vita Field Programmable Gate Array Subproject Documentation is
+licensed under The VitaSet License.
+
+The Vita Field Programmable Gate Array Logic Block has two registers.
+The IO register, and the Look Up Table register. The IO register
+stores three bits, and the Look Up Table register stores four bits.
+The IO register has six valid values that it can have, and those
+range from 000 to 101. When the IO register has the value of 110 or
+111, the Logic Block basically becomes a no-op.
+
+When the IO register has the value of 000, the IONorth pin is the
+most significant bit of the Look Up Table register and the IOEast
+pin is the least significant bit of the Look Up Table register. The
+IOSouth and IOWest pins both output the same 1 bit output from
+whatever 2-bit address is looked up in the Look Up Table register.
+
+When the IO register has the value of 001, the IOEast pin is the
+most significant bit of the Look Up Table register and the IOSouth
+pin is the least significant bit of the Look Up Table register. The
+IOWest and IONorth pins both output the same 1 bit output from
+whatever 2-bit address is looked up in the Look Up Table register.
+
+When the IO register has the value of 010, the IOSouth pin is the
+most significant bit of the Look Up Table register and the IOWest
+pin is the least significant bit of the Look Up Table register. The
+IONorth and IOEast pins both output the same 1 bit output from
+whatever 2-bit address is looked up in the Look Up Table register.
+
+When the IO register has the value of 011, the IOWest pin is the
+most significant bit of the Look Up Table register and the IONorth
+pin is the least significant bit of the Look Up Table register. The
+IOEast and IOSouth pins both output the same 1 bit output from
+whatever 2-bit address is looked up in the Look Up Table register.
+
+When the IO register has the value of 100, the IONorth pin is the
+most significant bit of the Look Up Table register and the IOSouth
+pin is the least significant bit of the Look Up Table register. The
+IOEast and IOWest pins both output the same 1 bit output from
+whatever 2-bit address is looked up in the Look Up Table register.
+
+When the IO register has the value of 101, the IOEast pin is the
+most significant bit of the Look Up Table register and the IOWest
+pin is the least significant bit of the Look Up Table register. The
+IONorth and IOSouth pins both output the same 1 bit output from
+whatever 2-bit address is looked up in the Look Up Table register.
+
+The Look Up Table Register can have it’s four bits be configured in a
+way that allows for two inputs, two outputs, one input, two outputs
+because one input is ignored, and zero inputs, two outputs because
+two inputs are ignored.
+
+______________________________________________________________________
+
+The Vita Field Programmable Gate Array Memory Block has two registers.
+The IO register here stores four bits instead of three bits, and the
+Single D Flip Flop register stores one bit. The IO register has
+twelve valid values that it can have, and those range from 0000 to
+1011. When the IO register has the values of 1100 or 1101 or 1110 or
+1111, the Memory Block basically becomes a no-op.
+
+When the IO register has the value of 0000, the IONorth pin is the
+data input bit of the D Flip Flop and the IOEast pin is the write
+enable bit of the D Flip Flop. The IOSouth and IOWest pins are both
+continuously assigned the same 1 bit value stored in the D Flip Flop
+even when there is no value change. Only when the write enable bit is
+the value of 1 and the ClockLine input wire is the value of posedge
+does the data input bit become the updated value stored in the D Flip
+Flop, and the IOSouth and IOWest pins begin outputting the new value.
+
+When the IO register has the value of 0001, the IOEast pin is the
+data input bit of the D Flip Flop and the IONorth pin is the write
+enable bit of the D Flip Flop. The IOSouth and IOWest pins are both
+continuously assigned the same 1 bit value stored in the D Flip Flop
+even when there is no value change. Only when the write enable bit is
+the value of 1 and the ClockLine input wire is the value of posedge
+does the data input bit become the updated value stored in the D Flip
+Flop, and the IOSouth and IOWest pins begin outputting the new value.
+
+When the IO register has the value of 0010, the IOEast pin is the
+data input bit of the D Flip Flop and the IOSouth pin is the write
+enable bit of the D Flip Flop. The IOWest and IONorth pins are both
+continuously assigned the same 1 bit value stored in the D Flip Flop
+even when there is no value change. Only when the write enable bit is
+the value of 1 and the ClockLine input wire is the value of posedge
+does the data input bit become the updated value stored in the D Flip
+Flop, and the IOWest and IONorth pins begin outputting the new value.
+
+When the IO register has the value of 0011, the IOSouth pin is the
+data input bit of the D Flip Flop and the IOEast pin is the write
+enable bit of the D Flip Flop. The IOWest and IONorth pins are both
+continuously assigned the same 1 bit value stored in the D Flip Flop
+even when there is no value change. Only when the write enable bit is
+the value of 1 and the ClockLine input wire is the value of posedge
+does the data input bit become the updated value stored in the D Flip
+Flop, and the IOWest and IONorth pins begin outputting the new value.
+
+When the IO register has the value of 0100, the IOSouth pin is the
+data input bit of the D Flip Flop and the IOWest pin is the write
+enable bit of the D Flip Flop. The IONorth and IOEast pins are both
+continuously assigned the same 1 bit value stored in the D Flip Flop
+even when there is no value change. Only when the write enable bit is
+the value of 1 and the ClockLine input wire is the value of posedge
+does the data input bit become the updated value stored in the D Flip
+Flop, and the IONorth and IOEast pins begin outputting the new value.
+
+When the IO register has the value of 0101, the IOWest pin is the
+data input bit of the D Flip Flop and the IOSouth pin is the write
+enable bit of the D Flip Flop. The IONorth and IOEast pins are both
+continuously assigned the same 1 bit value stored in the D Flip Flop
+even when there is no value change. Only when the write enable bit is
+the value of 1 and the ClockLine input wire is the value of posedge
+does the data input bit become the updated value stored in the D Flip
+Flop, and the IONorth and IOEast pins begin outputting the new value.
+
+When the IO register has the value of 0110, the IOWest pin is the
+data input bit of the D Flip Flop and the IONorth pin is the write
+enable bit of the D Flip Flop. The IOEast and IOSouth pins are both
+continuously assigned the same 1 bit value stored in the D Flip Flop
+even when there is no value change. Only when the write enable bit is
+the value of 1 and the ClockLine input wire is the value of posedge
+does the data input bit become the updated value stored in the D Flip
+Flop, and the IOEast and IOSouth pins begin outputting the new value.
+
+When the IO register has the value of 0111, the IONorth pin is the
+data input bit of the D Flip Flop and the IOWest pin is the write
+enable bit of the D Flip Flop. The IOEast and IOSouth pins are both
+continuously assigned the same 1 bit value stored in the D Flip Flop
+even when there is no value change. Only when the write enable bit is
+the value of 1 and the ClockLine input wire is the value of posedge
+does the data input bit become the updated value stored in the D Flip
+Flop, and the IOEast and IOSouth pins begin outputting the new value.
+
+When the IO register has the value of 1000, the IONorth pin is the
+data input bit of the D Flip Flop and the IOSouth pin is the write
+enable bit of the D Flip Flop. The IOEast and IOWest pins are both
+continuously assigned the same 1 bit value stored in the D Flip Flop
+even when there is no value change. Only when the write enable bit is
+the value of 1 and the ClockLine input wire is the value of posedge
+does the data input bit become the updated value stored in the D Flip
+Flop, and the IOEast and IOWest pins begin outputting the new value.
+
+When the IO register has the value of 1001, the IOSouth pin is the
+data input bit of the D Flip Flop and the IONorth pin is the write
+enable bit of the D Flip Flop. The IOEast and IOWest pins are both
+continuously assigned the same 1 bit value stored in the D Flip Flop
+even when there is no value change. Only when the write enable bit is
+the value of 1 and the ClockLine input wire is the value of posedge
+does the data input bit become the updated value stored in the D Flip
+Flop, and the IOEast and IOWest pins begin outputting the new value.
+
+When the IO register has the value of 1010, the IOEast pin is the
+data input bit of the D Flip Flop and the IOWest pin is the write
+enable bit of the D Flip Flop. The IONorth and IOSouth pins are both
+continuously assigned the same 1 bit value stored in the D Flip Flop
+even when there is no value change. Only when the write enable bit is
+the value of 1 and the ClockLine input wire is the value of posedge
+does the data input bit become the updated value stored in the D Flip
+Flop, and the IONorth and IOSouth pins begin outputting the new value.
+
+When the IO register has the value of 1011, the IOWest pin is the
+data input bit of the D Flip Flop and the IOEast pin is the write
+enable bit of the D Flip Flop. The IONorth and IOSouth pins are both
+continuously assigned the same 1 bit value stored in the D Flip Flop
+even when there is no value change. Only when the write enable bit is
+the value of 1 and the ClockLine input wire is the value of posedge
+does the data input bit become the updated value stored in the D Flip
+Flop, and the IONorth and IOSouth pins begin outputting the new value.

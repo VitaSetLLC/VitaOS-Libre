@@ -1,0 +1,59 @@
+The Vita FPGA Architecture Subproject is licensed under The VitaSet
+License.
+
+The Vita FPGA Architecture Verilog files VitaFPGAArchLogicBlock.v and
+VitaFPGAArchMemoryBlock.v are bugfree.
+
+Using two bit input, one bit output nand or two bit input, one bit
+output nor gates, one can express any possible truth table.
+
+The VitaFPGAArchMemoryBlock.v file implements a D-Flip Flop with two
+configurable single bit inputs and two configurable single bit outputs
+that output the same one bit value in two directions.
+
+The VitaFPGAArchLogicBlock.v file implements a LUT2 with two
+configurable one bit inputs and two one bit outputs outputting the same
+one bit value in two directions.
+
+A Vita FPGA Architecture Logic Block can act as an Vita FPGA
+Architecture Interconnect Block, by programming the LUT2 to ignore
+either the most significant bit input or the least significant bit
+input, listening to only one of the single bit inputs to output the
+same one bit value in two directions. Then, two Vita FPGA Architecture
+Interconnect Blocks can read that one bit value and output the same one
+bit value in four directions. As you can see, a single one bit input
+and one or more Vita FPGA Architecture Interconnect Blocks can cause
+more and more Vita FPGA Architecture Logic Blocks to receive the same
+one bit input value. However, each singular Vita FPGA Architecture
+Logic Block added can only add one more output direction for the same
+one bit input value.
+
+If however, your Vita FPGA Architecture Logic Blocks don't need to
+receive any more of the same one bit input value caused by a single one
+bit input, each Vita FPGA Architecture Logic Block can be programmed to
+ignore none of the two single bit inputs, or both of the single bit
+inputs.
+
+The VitaFPGAArchMemoryBlock.v file's
+IOReconfigurationQuadrupleDTypeFlipFlopRegister internal register
+determines what two sides are the two configurable single bit inputs,
+and what two directions will receive the same one bit value from the
+two configurable single bit outputs.
+
+The VitaFPGAArchLogicBlock.v file's
+IOReconfigurationTripleDTypeFlipFlopRegister internal register
+determines what two sides are the two configurable single bit inputs,
+and what two directions will receive the same one bit value from the
+two configurable single bit outputs.
+
+Thus, any possible truth table can be expressed with enough Vita FPGA
+Architecture Logic Blocks and with enough Vita FPGA Architecture Memory
+Blocks. Thus, any integrated circuit could run on the Vita FPGA
+Architecture, given enough Vita FPGA Architecture Logic Blocks and Vita
+FPGA Architecture Memory Blocks are available.
+
+You are welcome to check out how it works, as explained by the
+Documentation file and the source code files.
+
+The Vita FPGA Architecture Synthesizer Subproject is under development,
+and is licensed under The VitaSet License.

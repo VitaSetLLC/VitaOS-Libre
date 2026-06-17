@@ -1,0 +1,23 @@
+This entire directory is called the VitaOS-Libre project. However, each
+directory in the Sources directory is a subproject of the VitaOS-Libre
+project.
+
+There exist the BitBitJump-64Bit, HaltingProblemSolutionIdea,
+QuantumTunnelingTransistorRNGIdea, VitaFPGAArch,
+VitaFPGAArchSynthesizer, VitaFPGAEmulator and VitaKernel subprojects.
+
+The Builds directory contains the binaries made from the source code in
+the VitaOS-Libre project.
+
+The VitaOS-Libre project is licensed under The VitaSet License.
+
+It would be appreciated if you could donate or invest in VitaSet LLC,
+so that it would be possible to create computer chips with the Vita
+FPGA Architecture and a CPU that does cryptographic signature checking
+of a boot bitstream before loading it fully into the Vita FPGA
+Architecture. The CPU can also have battery-backed Sram bits to hold
+a Public and a Private Asymmetric Cryptographic Key, powered by one or
+two coin-cell batteries. The keys can be wiped by taking out both of
+the coin-cell batteries, or they can be kept and have the coin-cell
+batteries replaced by replacing one coin-cell battery and then the
+other coin-cell battery.

@@ -1,0 +1,26 @@
+The Vita FPGA Architecture Emulator Subproject is a program designed to
+emulate the Vita FPGA Architecture on non-FPGA computer chips.
+
+If you want to bypass the abstraction layers and add the Vita FPGA
+Architecture to your computer chips, then check out the VitaFPGAArch
+folder instead.
+
+If you want to emulate the Vita FPGA Architecture on top of a Vita FPGA
+Architecture chip (which doesn't exist yet) or on top of another FPGA
+Architecture chip, then check out the VitaFPGAArch folder instead.
+
+The Vita FPGA Architecture Emulator Subproject currently supports using
+a single x86_64 CPU core as its backend. However, if you would like to
+contribute new backends, then you are welcome to do so, so long as you
+agree that your contributions to the Vita FPGA Architecture Emulator
+Subproject will be licensed under The VitaSet license.
+
+A backend that would be welcome to see, would be a GPGPU backend.
+
+You need to have enough memory and patience to run this program.
+However, you can still quit the program at any time with Ctrl + C, but
+all of your progress may be lost. Future backends can reduce the amount
+of patience required with their increased performance.
+
+The Vita FPGA Architecture Synthesizer Subproject is under development,
+and is licensed under The VitaSet License.
